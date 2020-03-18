@@ -7,10 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4082F3724205542006F2323 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4082F3524205542006F2323 /* GameObject.cpp */; };
+		C4082F3A24205684006F2323 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4082F3824205684006F2323 /* Component.cpp */; };
+		C4082F3F242059B9006F2323 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4082F3D242059B9006F2323 /* Object.cpp */; };
+		C4082F4224205F69006F2323 /* SpriteRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4082F4024205F69006F2323 /* SpriteRenderer.cpp */; };
+		C4B66B76241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B66B75241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib */; };
+		C4B66B77241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = C4B66B75241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C4B66B7B241F0D8A008CDD4F /* SnowEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4B66B79241F0D8A008CDD4F /* SnowEngine.cpp */; };
 		C4EE67FA241D63AF00965952 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4EE67F9241D63AF00965952 /* main.cpp */; };
+		C4EE6802241D646400965952 /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EE6801241D646400965952 /* libSDL2-2.0.0.dylib */; };
+		C4EE6806241D898C00965952 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4EE6804241D898C00965952 /* Game.cpp */; };
+		C4EE6809241D89F500965952 /* Media.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4EE6807241D89F500965952 /* Media.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		C4B66B78241F05AB008CDD4F /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C4B66B77241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4EE67F4241D63AF00965952 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -23,8 +44,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C4082F3524205542006F2323 /* GameObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
+		C4082F3624205542006F2323 /* GameObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameObject.hpp; sourceTree = "<group>"; };
+		C4082F3824205684006F2323 /* Component.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		C4082F3924205684006F2323 /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
+		C4082F3D242059B9006F2323 /* Object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
+		C4082F3E242059B9006F2323 /* Object.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
+		C4082F4024205F69006F2323 /* SpriteRenderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteRenderer.cpp; sourceTree = "<group>"; };
+		C4082F4124205F69006F2323 /* SpriteRenderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SpriteRenderer.hpp; sourceTree = "<group>"; };
+		C4B66B75241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2_image-2.0.0.dylib"; path = "../../../../usr/local/Cellar/sdl2_image/2.0.5/lib/libSDL2_image-2.0.0.dylib"; sourceTree = "<group>"; };
+		C4B66B79241F0D8A008CDD4F /* SnowEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SnowEngine.cpp; sourceTree = "<group>"; };
+		C4B66B7A241F0D8A008CDD4F /* SnowEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SnowEngine.hpp; sourceTree = "<group>"; };
 		C4EE67F6241D63AF00965952 /* SDLGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDLGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EE67F9241D63AF00965952 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C4EE6801241D646400965952 /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../usr/local/Cellar/sdl2/2.0.12/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
+		C4EE6803241D666900965952 /* SDLGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SDLGame.entitlements; sourceTree = "<group>"; };
+		C4EE6804241D898C00965952 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		C4EE6805241D898C00965952 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		C4EE6807241D89F500965952 /* Media.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Media.cpp; sourceTree = "<group>"; };
+		C4EE6808241D89F500965952 /* Media.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Media.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +70,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B66B76241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib in Frameworks */,
+				C4EE6802241D646400965952 /* libSDL2-2.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4082F3B242058C5006F2323 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				C4B66B79241F0D8A008CDD4F /* SnowEngine.cpp */,
+				C4B66B7A241F0D8A008CDD4F /* SnowEngine.hpp */,
+				C4EE6804241D898C00965952 /* Game.cpp */,
+				C4EE6805241D898C00965952 /* Game.hpp */,
+				C4EE6807241D89F500965952 /* Media.cpp */,
+				C4EE6808241D89F500965952 /* Media.hpp */,
+				C4082F3524205542006F2323 /* GameObject.cpp */,
+				C4082F3624205542006F2323 /* GameObject.hpp */,
+				C4082F3824205684006F2323 /* Component.cpp */,
+				C4082F3924205684006F2323 /* Component.hpp */,
+				C4082F3D242059B9006F2323 /* Object.cpp */,
+				C4082F3E242059B9006F2323 /* Object.hpp */,
+				C4082F4024205F69006F2323 /* SpriteRenderer.cpp */,
+				C4082F4124205F69006F2323 /* SpriteRenderer.hpp */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		C4EE67ED241D63AF00965952 = {
 			isa = PBXGroup;
 			children = (
 				C4EE67F8241D63AF00965952 /* SDLGame */,
 				C4EE67F7241D63AF00965952 /* Products */,
+				C4EE6800241D646300965952 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +119,20 @@
 		C4EE67F8241D63AF00965952 /* SDLGame */ = {
 			isa = PBXGroup;
 			children = (
+				C4082F3B242058C5006F2323 /* lib */,
+				C4EE6803241D666900965952 /* SDLGame.entitlements */,
 				C4EE67F9241D63AF00965952 /* main.cpp */,
 			);
 			path = SDLGame;
+			sourceTree = "<group>";
+		};
+		C4EE6800241D646300965952 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4B66B75241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib */,
+				C4EE6801241D646400965952 /* libSDL2-2.0.0.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +145,7 @@
 				C4EE67F2241D63AF00965952 /* Sources */,
 				C4EE67F3241D63AF00965952 /* Frameworks */,
 				C4EE67F4241D63AF00965952 /* CopyFiles */,
+				C4B66B78241F05AB008CDD4F /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -119,7 +193,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B66B7B241F0D8A008CDD4F /* SnowEngine.cpp in Sources */,
+				C4082F4224205F69006F2323 /* SpriteRenderer.cpp in Sources */,
+				C4082F3A24205684006F2323 /* Component.cpp in Sources */,
 				C4EE67FA241D63AF00965952 /* main.cpp in Sources */,
+				C4EE6809241D89F500965952 /* Media.cpp in Sources */,
+				C4082F3F242059B9006F2323 /* Object.cpp in Sources */,
+				C4EE6806241D898C00965952 /* Game.cpp in Sources */,
+				C4082F3724205542006F2323 /* GameObject.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -228,6 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -238,9 +321,15 @@
 		C4EE67FE241D63AF00965952 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SDLGame/SDLGame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23R7628CJ9;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.12/lib,
+					/usr/local/Cellar/sdl2_image/2.0.5/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,9 +337,15 @@
 		C4EE67FF241D63AF00965952 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SDLGame/SDLGame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23R7628CJ9;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.12/lib,
+					/usr/local/Cellar/sdl2_image/2.0.5/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
