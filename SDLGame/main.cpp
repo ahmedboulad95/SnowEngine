@@ -8,7 +8,7 @@
 
 #include <iostream>
 #include <SDL2/SDL.h>
-#include "lib/SnowEngine.hpp"
+#include "lib/Game.hpp"
 
 SnowEngine::Game* game = nullptr;
 
