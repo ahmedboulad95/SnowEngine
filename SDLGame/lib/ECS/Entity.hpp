@@ -19,13 +19,22 @@ namespace SnowEngine {
             SnowEngine::ECS::ComponentManager* componentManagerInstance_;
             
         protected:
-            std::string entityId_;                      // Need to create EntityId class
-            static const std::string entityTypeId_;     // Need to create EntityTypeId class
+            const char* entityId_;                      // Need to create EntityId class
+            const char* std::string entityTypeId_;     // Need to create EntityTypeId class
             
         public:
-            Entity();
-            ~Entity();
-            std::string getEntityId();
+            Entity() {}
+            ~Entity() {}
+            std::string getEntityId() { return this->entityId_; }
+            
+            /*template<class T>
+            T* getComponent() { return this->componentManagerInstance_->getComponent<T>(this->entityId_); }
+            
+            template<class T>
+            T* addComponent(T* newComponent) { return this->componentManagerInstance_->addComponent(this->entityId_, newComponent); }
+            
+            template<class T>
+            void removeComponent(T* component) { this->componentManagerInstance_->removeComponent(this->entityId_, component); }*/
         };
     }
 }

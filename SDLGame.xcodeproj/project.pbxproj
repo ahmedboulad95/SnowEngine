@@ -7,16 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C47B026F2423044C00B776A8 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47B026D2423044C00B776A8 /* Entity.cpp */; };
-		C47B0272242311F200B776A8 /* EntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47B0270242311F200B776A8 /* EntityManager.cpp */; };
-		C47B02752423126400B776A8 /* ComponentManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47B02732423126400B776A8 /* ComponentManager.cpp */; };
-		C47B02792423136F00B776A8 /* ServiceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47B02772423136F00B776A8 /* ServiceManager.cpp */; };
 		C4B66B76241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B66B75241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib */; };
 		C4B66B77241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = C4B66B75241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C4EE67FA241D63AF00965952 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4EE67F9241D63AF00965952 /* main.cpp */; };
 		C4EE6802241D646400965952 /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EE6801241D646400965952 /* libSDL2-2.0.0.dylib */; };
-		C4EE6806241D898C00965952 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4EE6804241D898C00965952 /* Game.cpp */; };
-		C4EE6809241D89F500965952 /* Media.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4EE6807241D89F500965952 /* Media.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,22 +37,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C47B026D2423044C00B776A8 /* Entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		C443FB972426E9E200695C92 /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
 		C47B026E2423044C00B776A8 /* Entity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
-		C47B0270242311F200B776A8 /* EntityManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EntityManager.cpp; sourceTree = "<group>"; };
 		C47B0271242311F200B776A8 /* EntityManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EntityManager.hpp; sourceTree = "<group>"; };
-		C47B02732423126400B776A8 /* ComponentManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ComponentManager.cpp; sourceTree = "<group>"; };
 		C47B02742423126400B776A8 /* ComponentManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComponentManager.hpp; sourceTree = "<group>"; };
-		C47B02772423136F00B776A8 /* ServiceManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ServiceManager.cpp; sourceTree = "<group>"; };
 		C47B02782423136F00B776A8 /* ServiceManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ServiceManager.hpp; sourceTree = "<group>"; };
+		C4A336F52426FBA80031C877 /* Logger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Logger.hpp; sourceTree = "<group>"; };
 		C4B66B75241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2_image-2.0.0.dylib"; path = "../../../../usr/local/Cellar/sdl2_image/2.0.5/lib/libSDL2_image-2.0.0.dylib"; sourceTree = "<group>"; };
 		C4EE67F6241D63AF00965952 /* SDLGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDLGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EE67F9241D63AF00965952 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C4EE6801241D646400965952 /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../usr/local/Cellar/sdl2/2.0.12/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
 		C4EE6803241D666900965952 /* SDLGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SDLGame.entitlements; sourceTree = "<group>"; };
-		C4EE6804241D898C00965952 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		C4EE6805241D898C00965952 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
-		C4EE6807241D89F500965952 /* Media.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Media.cpp; sourceTree = "<group>"; };
 		C4EE6808241D89F500965952 /* Media.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Media.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,9 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				C47B02762423127900B776A8 /* ECS */,
-				C4EE6804241D898C00965952 /* Game.cpp */,
 				C4EE6805241D898C00965952 /* Game.hpp */,
-				C4EE6807241D89F500965952 /* Media.cpp */,
 				C4EE6808241D89F500965952 /* Media.hpp */,
 			);
 			path = lib;
@@ -90,16 +78,22 @@
 		C47B02762423127900B776A8 /* ECS */ = {
 			isa = PBXGroup;
 			children = (
-				C47B026D2423044C00B776A8 /* Entity.cpp */,
+				C4A336F7242701DD0031C877 /* components */,
 				C47B026E2423044C00B776A8 /* Entity.hpp */,
-				C47B0270242311F200B776A8 /* EntityManager.cpp */,
 				C47B0271242311F200B776A8 /* EntityManager.hpp */,
-				C47B02732423126400B776A8 /* ComponentManager.cpp */,
 				C47B02742423126400B776A8 /* ComponentManager.hpp */,
-				C47B02772423136F00B776A8 /* ServiceManager.cpp */,
 				C47B02782423136F00B776A8 /* ServiceManager.hpp */,
+				C443FB972426E9E200695C92 /* Component.hpp */,
 			);
 			path = ECS;
+			sourceTree = "<group>";
+		};
+		C4A336F7242701DD0031C877 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				C4A336F52426FBA80031C877 /* Logger.hpp */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 		C4EE67ED241D63AF00965952 = {
@@ -196,13 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C47B026F2423044C00B776A8 /* Entity.cpp in Sources */,
 				C4EE67FA241D63AF00965952 /* main.cpp in Sources */,
-				C4EE6809241D89F500965952 /* Media.cpp in Sources */,
-				C47B02752423126400B776A8 /* ComponentManager.cpp in Sources */,
-				C47B0272242311F200B776A8 /* EntityManager.cpp in Sources */,
-				C47B02792423136F00B776A8 /* ServiceManager.cpp in Sources */,
-				C4EE6806241D898C00965952 /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

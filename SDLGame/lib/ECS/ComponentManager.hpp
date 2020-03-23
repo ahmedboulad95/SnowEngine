@@ -9,20 +9,61 @@
 #ifndef ComponentManager_hpp
 #define ComponentManager_hpp
 
-#include <string>
+#include <unordered_map>
+#include <vector>
+#include "Component.hpp"
 
 namespace SnowEngine {
     namespace ECS {
         class ComponentManager {
+        private:
+            using ComponentRegistry = std::unordered_map<const char*, SnowEngine::ECS::Component*>;
+            using EntityComponentMap = std::unordered_map<const char*, std::unordered_map<const char*, SnowEngine::ECS::Component*>>;
+            using ComponentMap = std::unordered_map<const char*, SnowEngine::ECS::Component*>;
+            
+            ComponentRegistry componentRegistry_;
+            EntityComponentMap entityComponentMap_;
+            
         public:
-            ComponentManager();
-            ~ComponentManager();
+            ComponentManager() {}
+            ~ComponentManager() {}
             
             template<class T>
-            T* getComponent(const std::string entityId);
+            T* getComponent(const char* entityId) {
+                const char* componentTypeId = T::COMPONENT_TYPE_ID;
+                EntityComponentMap::const_iterator entityCmpMapIt = this->entityComponentMap_.find(entityId);
+                
+                if(entityCmpMapIt != this->entityComponentMap_.end()) {
+                    ComponentMap::const_iterator cmpIt = entityCmpMapIt->second.find(componentTypeId);
+                    return cmpIt->second;
+                }
+                
+                return nullptr;
+            }
             
             template<class T>
-            T* addComponent(const std::string entityId, T newComponent);
+            T* addComponent(const char* entityId) {
+                const char* componentTypeId = T::STATIC_COMPONENT_TYPE_ID;
+                
+                EntityComponentMap::const_iterator cmpMapIt = this->entityComponentMap_.find(entityId);
+                
+                if(cmpMapIt == this->entityComponentMap_.end()) {
+                    // Add new entity
+                }
+                
+                ComponentMap::const_iterator cmpIt = cmpMapIt->second.find(componentTypeId);
+                
+                if(cmpIt != cmpMapIt->second.end()) {
+                    return cmpIt->second;
+                }
+                
+                SnowEngine::ECS::Component* cmp = new T();
+                
+                this->entityComponentMap_[entityId].emplace(componentTypeId, cmp);
+                //cmpMapIt->second.emplace(componentTypeId, cmp);
+                
+                return cmp;
+            }
             
             template<class T>
             void removeComponent(const std::string entityId);

@@ -9,18 +9,27 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 #include "lib/Game.hpp"
+#include "lib/ECS/ComponentManager.hpp"
+#include "lib/ECS/components/Logger.hpp"
 
 SnowEngine::Game* game = nullptr;
 
 int main(int argc, const char * argv[]) {
     std::cout << "Starting game..." << std::endl;
     
-    game = new SnowEngine::Game();
-    game->start();
-    game->loop();
+    SnowEngine::ECS::Logger log = SnowEngine::ECS::Logger("testlogger");
+    log.info("Testing info call");
     
-    delete game;
-    game = nullptr;
+    std::cout << "Logger is active: " << log.isActive() << std::endl;
+    
+    SnowEngine::ECS::ComponentManager cmpMgr = SnowEngine::ECS::ComponentManager();
+    
+    //game = new SnowEngine::Game();
+    //game->start();
+    //game->loop();
+    
+    //delete game;
+    //game = nullptr;
     
     return 0;
 }
