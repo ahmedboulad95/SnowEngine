@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C41708BB2512F272009F3C9B /* uuid.hpp in Sources */ = {isa = PBXBuildFile; fileRef = C41708BA2512F272009F3C9B /* uuid.hpp */; };
 		C4B66B76241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B66B75241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib */; };
 		C4B66B77241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = C4B66B75241F05AB008CDD4F /* libSDL2_image-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C4EE67FA241D63AF00965952 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4EE67F9241D63AF00965952 /* main.cpp */; };
@@ -37,6 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C41708BA2512F272009F3C9B /* uuid.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = uuid.hpp; sourceTree = "<group>"; };
 		C443FB972426E9E200695C92 /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
 		C47B026E2423044C00B776A8 /* Entity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
 		C47B0271242311F200B776A8 /* EntityManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EntityManager.hpp; sourceTree = "<group>"; };
@@ -68,11 +70,20 @@
 		C4082F3B242058C5006F2323 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				C433FCE92511A888008E236D /* Utilities */,
 				C47B02762423127900B776A8 /* ECS */,
 				C4EE6805241D898C00965952 /* Game.hpp */,
 				C4EE6808241D89F500965952 /* Media.hpp */,
 			);
 			path = lib;
+			sourceTree = "<group>";
+		};
+		C433FCE92511A888008E236D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C41708BA2512F272009F3C9B /* uuid.hpp */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		C47B02762423127900B776A8 /* ECS */ = {
@@ -190,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C41708BB2512F272009F3C9B /* uuid.hpp in Sources */,
 				C4EE67FA241D63AF00965952 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,8 +18,8 @@ namespace SnowEngine {
         class ComponentManager {
         private:
             using ComponentRegistry = std::unordered_map<const char*, SnowEngine::ECS::Component*>;
-            using EntityComponentMap = std::unordered_map<const char*, std::unordered_map<const char*, SnowEngine::ECS::Component*>>;
             using ComponentMap = std::unordered_map<const char*, SnowEngine::ECS::Component*>;
+            using EntityComponentMap = std::unordered_map<const char*, ComponentMap>;
             
             ComponentRegistry componentRegistry_;
             EntityComponentMap entityComponentMap_;
@@ -48,27 +48,28 @@ namespace SnowEngine {
                 EntityComponentMap::const_iterator cmpMapIt = this->entityComponentMap_.find(entityId);
                 
                 if(cmpMapIt == this->entityComponentMap_.end()) {
-                    // Add new entity
-                }
-                
-                ComponentMap::const_iterator cmpIt = cmpMapIt->second.find(componentTypeId);
-                
-                if(cmpIt != cmpMapIt->second.end()) {
-                    return cmpIt->second;
+                    this->entityComponentMap_.emplace(entityId, ComponentMap());
+                } else {
+                    ComponentMap::const_iterator cmpIt = cmpMapIt->second.find(componentTypeId);
+                    
+                    if(cmpIt != cmpMapIt->second.end()) {
+                        return cmpIt->second;
+                    }
                 }
                 
                 SnowEngine::ECS::Component* cmp = new T();
                 
                 this->entityComponentMap_[entityId].emplace(componentTypeId, cmp);
-                //cmpMapIt->second.emplace(componentTypeId, cmp);
-                
                 return cmp;
             }
             
             template<class T>
-            void removeComponent(const std::string entityId);
+            void removeComponent(const char* entityId) {
+                const char* componentTypeId = T::STATIC_COMPONENT_TYPE_ID;
+                this->entityComponentMap_[entityId].erase(componentTypeId);
+            }
         };
     }
 }
 
-#endif /* ComponentManager_hpp */
+#endif

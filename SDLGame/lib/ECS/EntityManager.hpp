@@ -9,10 +9,23 @@
 #ifndef EntityManager_hpp
 #define EntityManager_hpp
 
+#include <unordered_map>
+#include "Entity.hpp"
+
 namespace SnowEngine {
     namespace ECS {
         class EntityManager {
+        private:
+            using EntityRegistry = std::unordered_map<const char*, SnowEngine::ECS::Entity*>;
             
+            EntityRegistry entityRegistry_;
+            
+        public:
+            EntityManager() {}
+            ~EntityManager() {}
+            
+            template<class T>
+            T* addEntity(SnowEngine::ECS::Entity* newEntity) {}
         };
     }
 }

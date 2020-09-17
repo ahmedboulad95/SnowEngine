@@ -21,9 +21,13 @@ namespace SnowEngine {
         protected:
             const char* entityId_;                      // Need to create EntityId class
             const char* std::string entityTypeId_;     // Need to create EntityTypeId class
+            bool isActive_;
             
         public:
-            Entity() {}
+            Entity() {
+                this->isActive_ = true;
+            }
+            
             ~Entity() {}
             std::string getEntityId() { return this->entityId_; }
             
